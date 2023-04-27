@@ -61,12 +61,11 @@ export default function Cities() {
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.9 }}
               key={state.state}
-              className="h-60 cursor-pointer rounded-md"
+              className="h-40 cursor-pointer rounded-md"
             >
-              <div className="bg-red-500/80 p-4 h-60 hover:bg-red-600/80 justify-center flex flex-col rounded-md items-center">
+              <div className="bg-red-500/80 p-4 h-40 hover:bg-red-600/80 justify-center flex flex-col rounded-md items-center">
                 <h2 className="text-2xl font-medium text-center">{city.city}</h2>
                 <p className="text-xl font-thin">Air Quality Index</p>
-                <p className="text-xl font-thin">Carbon Monoxide</p>
               </div>
             </motion.div>
           </Link>
