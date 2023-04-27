@@ -54,18 +54,20 @@ export default function Cities() {
           Back to States
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-1 p-2">
         {cities.map((city) => (
           <Link to={`/country/${countryId}/${stateId}/${city.city}`} key={city.city}>
             <motion.div
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.9 }}
               key={state.state}
-              className="flex flex-col h-60 p-4 items-center cursor-pointer justify-center bg-red-500 hover:bg-red-600 border-[0.5px] border-slate-700 rounded-md"
+              className="h-60 cursor-pointer rounded-md"
             >
-              <h2 className="text-2xl font-medium text-center">{city.city}</h2>
-              <p className="text-xl font-thin">Air Quality Index</p>
-              <p className="text-xl font-thin">Carbon Monoxide</p>
+              <div className="bg-red-500/80 p-4 h-60 hover:bg-red-600/80 justify-center flex flex-col rounded-md items-center">
+                <h2 className="text-2xl font-medium text-center">{city.city}</h2>
+                <p className="text-xl font-thin">Air Quality Index</p>
+                <p className="text-xl font-thin">Carbon Monoxide</p>
+              </div>
             </motion.div>
           </Link>
         ))}

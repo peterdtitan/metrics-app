@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="bg-red-300">
+    <div className="bg-red-400">
       <Routes>
         <Route path="/" element={<Countries />} />
         <Route path="/country/:countryId" element={<States />} />
