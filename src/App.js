@@ -5,6 +5,7 @@ import { fetchCountries } from './redux/countries/countriesSlice';
 import Countries from './components/Countries';
 import States from './components/States';
 import Cities from './components/Cities';
+import Info from './components/Info';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,8 +34,9 @@ function App() {
     <div className="bg-red-300">
       <Routes>
         <Route path="/" element={<Countries />} />
-        <Route path="/country/:id" element={<States />} />
-        <Route path="/country/:id/:id" element={<Cities />} />
+        <Route path="/country/:countryId" element={<States />} />
+        <Route path="/country/:countryId/:stateId" element={<Cities />} />
+        <Route path="/country/:countryId/:stateId/:cityId" element={<Info />} />
       </Routes>
     </div>
   );

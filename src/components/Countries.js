@@ -2,15 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import world from '../assets/world-map.png';
 
 export default function Countries() {
   const { countries } = useSelector((state) => state.countries);
 
   return (
     <div className="flex flex-col w-screenfont-montserrat">
-      <div className="flex flex-col h-80 items-center justify-center bg-red-500">
-        <h1 className="text-4xl font-medium">World&apos;s Air Quality</h1>
-        <p className="text-2xl font-thin">Select a country to view air quality metrics</p>
+      <div className="flex flex-col md:flex-row p-4 gap-y-4 h-80 items-center justify-evenly bg-red-500">
+        <img src={world} alt="world-map" className="h-60" />
+        <div className="flex flex-col">
+          <h1 className="text-4xl font-medium">World&apos;s Air Quality</h1>
+          <p className="text-2xl font-thin">Select a country to view air quality metrics</p>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2">
         {countries.map((country) => (
