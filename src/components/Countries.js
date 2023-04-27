@@ -37,7 +37,7 @@ export default function Countries() {
           <p className="text-2xl font-thin">Select a country to view air quality metrics</p>
           <input
             type="text"
-            placeholder="Search for a country"
+            placeholder="Search country"
             value={searchQuery}
             onChange={handleSearch}
             className="mt-4 p-2 rounded-md border-[1px]border-red-600 focus:outline-red-600"
