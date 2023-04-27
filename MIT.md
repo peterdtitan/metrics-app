@@ -19,26 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-  { /* useEffect(() => {
-    let isMounted = true;
-
-    const fetchData = async () => {
-      const response = await fetch(
-        `https://api.airvisual.com/v2/city?city=${cityId}&state=${stateId}&country=${countryId}&key=392bf691-dca6-4164-b5cc-c70cfe7acd3d`,
-      );
-      const data = await response.json();
-
-      if (isMounted) {
-        setInfo(data.data);
-      }
-    };
-
-    fetchData();
-
-    return () => {
-      isMounted = false;
-      setLoading(false);
-    };
-  }, [countryId, stateId, cityId]);
-    */ }
