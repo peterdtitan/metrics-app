@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { Provider } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import Countries from '../Countries';
 import store from '../../redux/store';
@@ -13,9 +12,7 @@ jest.mock('react-redux', () => ({
 
 describe('Countries component', () => {
   beforeEach(() => {
-    useSelector.mockImplementation((callback) => {
-      return callback({ countries: { countries: [] } });
-    });
+    useSelector.mockImplementation((callback) => callback({ countries: { countries: [] } }));
   });
 
   afterEach(() => {
@@ -23,16 +20,14 @@ describe('Countries component', () => {
   });
 
   it('renders countries list', async () => {
-    useSelector.mockImplementation((callback) => {
-      return callback({
-        countries: {
-          countries: [
-            { country: 'Country1', states: [] },
-            { country: 'Country2', states: [] },
-          ],
-        },
-      });
-    });
+    useSelector.mockImplementation((callback) => callback({
+      countries: {
+        countries: [
+          { country: 'Country1', states: [] },
+          { country: 'Country2', states: [] },
+        ],
+      },
+    }));
 
     render(
       <Provider store={store}>
@@ -49,16 +44,14 @@ describe('Countries component', () => {
   });
 
   it('filters countries by search query', async () => {
-    useSelector.mockImplementation((callback) => {
-      return callback({
-        countries: {
-          countries: [
-            { country: 'Country1', states: [] },
-            { country: 'Country2', states: [] },
-          ],
-        },
-      });
-    });
+    useSelector.mockImplementation((callback) => callback({
+      countries: {
+        countries: [
+          { country: 'Country1', states: [] },
+          { country: 'Country2', states: [] },
+        ],
+      },
+    }));
 
     render(
       <Provider store={store}>
