@@ -140,8 +140,8 @@ To run tests using jest, run the following command:
 > In the future, the following features will be considered: 
 
 - [ ] **Responsiveness for smaller devices**
-- [ ] **More info on rockets and wiki pages**
-- [ ] **Embed user accounts**
+- [ ] **More data on Air quality with detailed legends**
+- [ ] **Embed light mode and dark mode features**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
