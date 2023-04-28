@@ -29,12 +29,8 @@ export default function Info() {
     };
   }, [countryId, stateId, cityId]);
 
-  function goBack() {
-    navigate(-1);
-  }
-
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="flex items-center justify-center"><p>Loading...</p></div>;
   }
   return (
     <div className="flex flex-col gap-4 h-screen items-center justify-center font-montserrat">
@@ -105,7 +101,7 @@ export default function Info() {
         <button
           type="button"
           className="p-2 mt-6 bg-black text-white rounded-sm hover:text-red-400"
-          onClick={goBack}
+          onClick={() => navigate(-1)}
         >
           Back
         </button>
